@@ -17,7 +17,7 @@ jobs:
     - name: Install dependencies
       run: sudo pip install -r docs/requirements.txt
     - name: Build HTML docs
-      run: poetry run sphinx-build -M dirhtml docs docs/_build -W --keep-going
+      run: sphinx-build -M dirhtml docs docs/_build -W --keep-going
     - name: Upload HTML docs
       uses: actions/upload-artifact@v3
       with:
@@ -26,7 +26,7 @@ jobs:
     - name: Install TeX Live
       run: sudo apt install -y latexmk texlive texlive-latex-extra
     - name: Build PDF docs
-      run: poetry run sphinx-build -M latexpdf docs docs/_build
+      run: sphinx-build -M latexpdf docs docs/_build
     - name: Upload PDF docs
       uses: actions/upload-artifact@v3
       with:
