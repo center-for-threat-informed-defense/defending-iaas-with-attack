@@ -1,0 +1,52 @@
+name: publish
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Install dependencies
+      run: sudo pip install -r docs/requirements.txt
+    - name: Build HTML docs
+      run: sphinx-build -M dirhtml docs docs/_build -W --keep-going
+    - name: Upload HTML docs
+      uses: actions/upload-artifact@v3
+      with:
+        name: diwa_docs_html
+        path: docs/_build/dirhtml/
+    - name: Install TeX Live
+      run: sudo apt install -y latexmk texlive texlive-latex-extra
+    - name: Build PDF docs
+      run: sphinx-build -M latexpdf docs docs/_build
+    - name: Upload PDF docs
+      uses: actions/upload-artifact@v3
+      with:
+        name: diwa_docs_pdf
+        path: docs/_build/latex/defendingiaaswithattck.pdf
+
+  github_pages:
+    # This job only runs when committing or merging to main branch.
+    if: github.ref_name == 'main'
+    needs: docs
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download HTML docs
+      uses: actions/download-artifact@v3
+      with:
+        name: diwa_docs_html
+        path: docs
+    - name: Publish to GitHub pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
