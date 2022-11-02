@@ -62,7 +62,7 @@ html_show_sphinx = False
 html_use_smartypants = False
 
 html_theme_options = {
-    # "analytics_id": "G-G4TFP56139", TODO replace with
+    "analytics_id": "G-4CBK5B2TNM",
     "display_version": True,
     "logo_only": True,
     "style_external_links": True,
