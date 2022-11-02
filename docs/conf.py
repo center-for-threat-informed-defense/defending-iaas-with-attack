@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Defending IAAS with ATT&CK"
+project = "Defending IaaS with ATT&CK"
 copyright = "2022, Center for Threat-Informed Defense"
 author = "Center for Threat-Informed Defense"
 

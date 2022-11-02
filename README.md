@@ -1,8 +1,23 @@
 [![MITRE ATT&CK® v11](https://img.shields.io/badge/MITRE%20ATT%26CK®-v11-red)](https://attack.mitre.org/versions/v11/)
 [![build status](https://github.com/center-for-threat-informed-defense/defending-iaas-with-attack/actions/workflows/publish.yml/badge.svg)](https://github.com/center-for-threat-informed-defense/defending-iaas-with-attack/actions/workflows/publish.yml)
 
-# Defending IAAS with ATT&CK
+# Defending IaaS with ATT&CK
 
+Organizations using Infrastructure-as-a-Service (IaaS) need to identify the
+MITRE ATT&CK® techniques that are relevant, whether they occur at the **cloud
+management layer**, the **container technology**, or on **hosted
+infrastructure**. The Defending IaaS with ATT&CK Project presents a methodology
+to identify techniques across multiple platforms that align to the IaaS attack
+surface, and also an ATT&CK matrix overlay for describing and visualizing this
+collection of techniques. Organizations can use the IaaS collection straight
+away, or they can use the methodology to generate their own tailored collections
+of techniques.
+
+**Table Of Contents:**
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+- [Getting Involved](#getting-involved)
 - [Background](#background)
 - [Scope](#scope)
 - [Methodology](#methodology)
@@ -17,32 +32,67 @@
 - [How Do I Contribute?](#how-do-i-contribute)
 - [Notice](#notice)
 
-Organizations using Infrastructure as a Service (IaaS) need to understand the
-techniques adversaries can use against them whether they occur at the **cloud
-management layer**, the **container technology**, or on **hosted
-infrastructure**. Organizations seeking a holistic view of adversary activities
-against IaaS would need to combine techniques across Linux, Cloud (IaaS), and
-Containers, examining each technique for relevancy to their environment.
+## Overview
 
-Adapting the process outlined in the Cyber Threat Model Methodology<!-- ``(LINK
-TO CYBER THREAT METHODOLOGY HERE)`` -->, the Defending IaaS with ATT&CK® Project
-developed a methodology to identify and select techniques across multiple
-platforms that align to the IaaS attack surface. The procedure provides the
-community a straightforward and tailorable approach to identify, build, and
-share collections of techniques to provide a comprehensive view of adversary
+Organizations seeking a holistic view of adversary activities against IaaS need
+to consider a wide variety of techniques across Linux, Cloud (IaaS), and
+Containers, weighing each technique for relevancy to their environment. Adapting
+the process outlined in the Cyber Threat Model Methodology<!-- ``(LINK TO CYBER
+THREAT METHODOLOGY HERE)`` -->, the Defending IaaS with ATT&CK Project developed
+a methodology to identify an attack surface, develop threat models, and then
+select relevant techniques across multiple platforms. The methodology provides
+the community a straightforward and tailorable approach to identify, build, and
+share collections of techniques that provide a comprehensive view of adversary
 behavior.
 
-The Defending IaaS with ATT&CK methodology defines the attack surface, specifies
-platforms to include from the ATT&CK knowledge base, selects criteria to
-determine applicable techniques, builds the combined set of techniques into a
-collection, and visualizes the results into a matrix to interactively navigate
-techniques and create custom views using layers. The resulting collection of
-techniques can be extended to detect and mitigate adversarial activity. The
-collection can be used as a foundation for:
+The Defending IaaS with ATT&CK methodology does the following:
+
+1. Defines an attack surface for IaaS.
+2. Specify platforms to include from the ATT&CK knowledge base.
+3. Select criteria to determine applicable techniques.
+4. Build the combined set of techniques into a collection.
+5. Visualize the collection as a matrix to interactively navigate techniques and
+   create custom views using layers.
+
+The resulting collection of techniques can be extended to detect and mitigate
+adversarial activity. The collection can be used as a foundation for:
+
 - Adversary detection and analytics
 - Cyber Threat Intelligence (CTI) enrichment
 - Adversary emulation and red teaming
 - Security assessment and engineering
+
+## Getting Started
+
+The best place to start is with the documentation: this will familiarize you
+with the project, the methodology, and resulting collection of techniques. Next,
+view the collection in ATT&CK Navigator. For a deeper dive, upgrade to the
+latest version of ATT&CK Workbench and use its new features to create your own
+collections.
+
+| Resource | Description |
+| -------- | ----------- |
+| [Documentation](https://center-for-threat-informed-defense.github.io/defending-iaas-with-attack/) | Documentation for Defending IaaS with ATT&CK, including methodology and technical deep dive. |
+| [ATT&CK Navigator]([/stix/attack-flow-schema-2.0.0.json](https://center-for-threat-informed-defense.github.io/attack-navigator/)) | A customized ATT&CK Navigator that embeds the Defending IaaS collection under the "Create New Layer" option. |
+| [ATT&CK Workbench](https://github.com/center-for-threat-informed-defense/attack-workbench-frontend) | Upgrades to ATT&CK Workbench facilitate creating new collections for projects such as this one. |
+| [Defending IaaS Collection](/data/defending-iaas-0.1.json/) | The collection of techniques represented as a machine-readable STIX bundle. |
+
+## Getting Involved
+
+There are several ways that you can get involved with this project and help
+advance threat-informed defense:
+
+- **Review the collection using ATT&CK Navigator or ATT&CK Workbench.**
+  Navigator is the easiest way to get started, using the resource link above. If
+  you are already a Workbench user, you will find that the latest version
+  includes new capabilities that are helpful for creating custom collections.
+- **Read the methodology.** The Defending IaaS collection is helpful in its own
+  right, but the methodology is provided so that organizations can create
+  tailored collections to meet their own needs.
+- **Build and share your own collections!** This project provides the
+  methodology and tools needed to build collections tailored to any need. You
+  can build proprietary collections to use within your organization, or you can
+  publish collections to benefit the community.
 
 ## Background
 

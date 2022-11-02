@@ -1,4 +1,4 @@
-Defending IAAS with ATT&CK
+Defending IaaS with ATT&CK
 ==========================
 
 TODO put some text here. Here's an Attack Flow to use as a basis:
