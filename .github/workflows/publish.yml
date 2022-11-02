@@ -14,8 +14,12 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: '3.8'
+    - name: Install Poetry
+      run: curl -sSL https://install.python-poetry.org/ | python -
+    - name: Add Poetry to PATH
+      run: echo "$HOME/.poetry/bin" >> $GITHUB_PATH
     - name: Install dependencies
-      run: sudo pip install -r docs/requirements.txt
+      run: poetry install
     - name: Build HTML docs
       run: sphinx-build -M dirhtml docs docs/_build -W --keep-going
     - name: Upload HTML docs
