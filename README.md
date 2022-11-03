@@ -49,8 +49,8 @@ The Defending IaaS with ATT&CK methodology does the following:
 
 1. Defines an attack surface for IaaS.
 2. Specifies platforms to include from the ATT&CK knowledge base.
-3. Selects criteria to determine applicable techniques.
-4. Builds the combined set of techniques into a collection.
+3. Defines selection criteria to determine applicable techniques.
+4. Reviews and builds the combined set of techniques into a collection.
 5. Visualizes the collection as a matrix to interactively navigate techniques and
    create custom views using layers.
 
