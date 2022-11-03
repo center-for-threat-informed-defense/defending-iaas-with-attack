@@ -8,10 +8,10 @@ MITRE ATT&CK® techniques that are relevant, whether they occur at the **cloud
 management layer**, the **container technology**, or on **hosted
 infrastructure**. The Defending IaaS with ATT&CK Project presents a methodology
 to identify techniques across multiple platforms that align to the IaaS attack
-surface, and also an ATT&CK matrix overlay for describing and visualizing this
-collection of techniques. Organizations can use the IaaS collection straight
-away, or they can use the methodology to generate their own tailored collections
-of techniques.
+surface, and a collection of techniques in an ATT&CK matrix for visualization
+and assessment. Organizations can use the IaaS collection straight away, or 
+they can use the methodology to generate their own tailored collections of 
+techniques.
 
 **Table Of Contents:**
 
@@ -48,10 +48,10 @@ behavior.
 The Defending IaaS with ATT&CK methodology does the following:
 
 1. Defines an attack surface for IaaS.
-2. Specify platforms to include from the ATT&CK knowledge base.
-3. Select criteria to determine applicable techniques.
-4. Build the combined set of techniques into a collection.
-5. Visualize the collection as a matrix to interactively navigate techniques and
+2. Specifies platforms to include from the ATT&CK knowledge base.
+3. Selects criteria to determine applicable techniques.
+4. Builds the combined set of techniques into a collection.
+5. Visualizes the collection as a matrix to interactively navigate techniques and
    create custom views using layers.
 
 The resulting collection of techniques can be extended to detect and mitigate
@@ -73,7 +73,7 @@ collections.
 | Resource | Description |
 | -------- | ----------- |
 | [Documentation](https://center-for-threat-informed-defense.github.io/defending-iaas-with-attack/) | Documentation for Defending IaaS with ATT&CK, including methodology and technical deep dive. |
-| [ATT&CK Navigator]([/stix/attack-flow-schema-2.0.0.json](https://center-for-threat-informed-defense.github.io/attack-navigator/)) | A customized ATT&CK Navigator that embeds the Defending IaaS collection under the "Create New Layer" option. |
+| [ATT&CK Navigator](https://center-for-threat-informed-defense.github.io/attack-navigator/) | A customized ATT&CK Navigator that embeds the Defending IaaS collection under the "Create New Layer" option. |
 | [ATT&CK Workbench](https://github.com/center-for-threat-informed-defense/attack-workbench-frontend) | Upgrades to ATT&CK Workbench facilitate creating new collections for projects such as this one. |
 | [Defending IaaS Collection](/data/defending-iaas-0.1.json/) | The collection of techniques represented as a machine-readable STIX bundle. |
 
@@ -136,13 +136,12 @@ to support these and other use cases.
 
 ## Methodology
 
-The methodology consists of five (5) steps: 1.	**Identify the Attack Surface**
-– select the domains and platforms to include in the threat model 2.	**Compile
-Source Data** – Identify and import sets of ATT&CK techniques 3.	**Define
-Selection Criteria** – Specify the rules used to include or exclude techniques
-4.	**Review Applicable Techniques** – Select applicable techniques according to
-the criteria 5.	**Create a Collection** – Publish collection and create
-visualizations
+The methodology consists of five (5) steps: 
+1.	**Identify the Attack Surface** – select the domains and platforms to include in the threat model 
+2.	**Compile Source Data** – Identify and import sets of ATT&CK techniques 
+3.	**Define Selection Criteria** – Specify the rules used to include or exclude techniques
+4.	**Review Applicable Techniques** – Select applicable techniques according to the criteria 
+5.	**Create a Collection** – Publish collection and create visualizations
 
 <!-- ``(INSERT LINK FOR Figure 4 Defending IaaS Methodology)`` -->
 
@@ -260,8 +259,6 @@ define custom views using layers.
 ``(insert Figure 8 Notional Defending IaaS Matrix)``
 -->
 
----
-
 ## Questions and Feedback
 Please submit issues for any technical questions/concerns or contact
 ctid@mitre-engenuity.org directly for more general inquiries.
@@ -269,29 +266,11 @@ ctid@mitre-engenuity.org directly for more general inquiries.
 Also see the guidance for contributors if are you interested in contributing or
 simply reporting issues.
 
-## Guidance
 
-### Proposing Changes
-
-* Please open a [Pull
-  Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
-  (PR) against the `main` branch for any desired changes. The PR will be
-  reviewed by the project team.
-* Note that all PR checks must pass to be eligible for merge approval.
-
-## How Do I Contribute?
-We welcome your feedback and contributions to help advance **Defending IaaS with
-ATT&CK**. Please see the guidance for contributors if are you interested in
-[contributing or simply reporting issues.](/CONTRIBUTING.md)
-
-Please submit
-[issues](https://github.com/center-for-threat-informed-defense/defending-iaas-with-attack/issues)
-for any technical questions/concerns or contact ctid@mitre-engenuity.org
-directly for more general inquiries.
 
 ## Notice
 Copyright 2022 MITRE Engenuity. Approved for public release. Document number
-XXXXX
+CT0059
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License. You may obtain a copy of the
