@@ -8,41 +8,29 @@ Overview
 Introduction
 -------------
 
-(TODO customize this section)
 
-The Attack Flow project helps defenders move from tracking adversary behaviors
-individually, to the sequence of techniques adversaries use, to achieve their
-goals. Understanding the context within those sequences, as well as the
-relationships among them, enables additional defensive capabilities that make
-defenders much more effective. The project seeks to demonstrate how attack flows
-can explain defensive posture to executives, aid defenders to understand
-lessons-learned from an incident, and support red-teamers to easily compose
-realistic adversary emulation scenarios.
+Defending IAAS with ATT&CK delivers an approach to generate custom ATT&CK® matrix that reflects adversary behaviors in modern cloud environments.
 
+Organizations using Infrastructure as a Service (IaaS) need to understand the techniques adversaries can use against them whether they occur at the cloud management layer, the container technology, or on hosted infrastructure. Organizations seeking a holistic view of adversary activities against IaaS would need to combine techniques across Linux, Cloud (IaaS), and Containers, examining each technique for relevancy to their environment.
+
+Adapting the process outlined in the Cyber Threat Model Methodology, the Defending IaaS with ATT&CK® Project developed a methodology to identify and select techniques across multiple platforms that align to the IaaS attack surface. The procedure provides the community a straightforward and tailorable approach to identify, build, and share collections of techniques to provide a comprehensive view of adversary behavior.
+
+The Defending IaaS with ATT&CK methodology defines the attack surface, specifies platforms to include from the ATT&CK knowledge base, selects criteria to determine applicable techniques, builds the combined set of techniques into a collection, and visualizes the results into a matrix to interactively navigate techniques and create custom views using layers. The resulting collection of techniques can be extended to detect and mitigate adversarial activity.
+
+..
+    <!--Insert attack surface image here from infographic-->
 Use Cases
 ----------
+DIWA is designed to support the following use cases:
 
-(TODO add more sections)
+        + Passive Cyber Table Top Testing, Adversary Emulation Planning, and Pen Testing.
+        + Expand Threat Collection to Security Stack Mappings for your CSP (Azure, AWS , Google Cloud) for protect, detect, and response.
+        + End-to-End Threat Model –How this can be applied for multi-cloud interoperable architectures (e.g., employee’s mobile device   (android/IoS), employee’s Windows/MacOS to organization’s leased CSP’s IaaS and/or privately hosted on premise infrastructure).
 
 Get Involved
 ------------
-
-(TODO customize this section)
-
 There are several ways that you can get involved with this project and help
-advance threat-informed defense:
-
-- :newsgroup:`Tell us what you think.` Check out the (TODO), take the
-  (TODO) for a spin, and review the (TODO).
-- :newsgroup:`Help us prioritize additional example flows to create.` Let us know what
-  examples you would like to turned into an Attack Flow. Your input will help us
-  prioritize how we expand our corpus.
-- :newsgroup:`Share your use cases.` We are interested in developing additional tools
-  and resources to help the community understand and make threat-informed decisions in
-  their risk management programs. If you have ideas or suggestions, we consider them as
-  we explore additional research projects.
-
-Send your feedback to ctid@mitre-engenuity.org or post on `GitHub issues
+advance threat-informed defense. Send your feedback to ctid@mitre-engenuity.org or post on `GitHub issues
 <https://github.com/center-for-threat-informed-defense/defending-iaas-with-attack/issues>`__.
 
 Notice
