@@ -9,8 +9,8 @@ management layer**, the **container technology**, or on **hosted
 infrastructure**. The Defending IaaS with ATT&CK Project presents a methodology
 to identify techniques across multiple platforms that align to the IaaS attack
 surface, and a collection of techniques in an ATT&CK matrix for visualization
-and assessment. Organizations can use the IaaS collection straight away, or 
-they can use the methodology to generate their own tailored collections of 
+and assessment. Organizations can use the IaaS collection straight away, or
+they can use the methodology to generate their own tailored collections of
 techniques.
 
 **Table Of Contents:**
@@ -27,9 +27,6 @@ techniques.
   - [4.	Review Applicable Techniques](#4review-applicable-techniques)
   - [5.	Create a Collection](#5create-a-collection)
 - [Questions and Feedback](#questions-and-feedback)
-- [Guidance](#guidance)
-  - [Proposing Changes](#proposing-changes)
-- [How Do I Contribute?](#how-do-i-contribute)
 - [Notice](#notice)
 
 ## Overview
@@ -136,11 +133,11 @@ to support these and other use cases.
 
 ## Methodology
 
-The methodology consists of five (5) steps: 
-1.	**Identify the Attack Surface** – select the domains and platforms to include in the threat model 
-2.	**Compile Source Data** – Identify and import sets of ATT&CK techniques 
+The methodology consists of five (5) steps:
+1.	**Identify the Attack Surface** – select the domains and platforms to include in the threat model
+2.	**Compile Source Data** – Identify and import sets of ATT&CK techniques
 3.	**Define Selection Criteria** – Specify the rules used to include or exclude techniques
-4.	**Review Applicable Techniques** – Select applicable techniques according to the criteria 
+4.	**Review Applicable Techniques** – Select applicable techniques according to the criteria
 5.	**Create a Collection** – Publish collection and create visualizations
 
 <!-- ``(INSERT LINK FOR Figure 4 Defending IaaS Methodology)`` -->
@@ -270,7 +267,7 @@ simply reporting issues.
 
 ## Notice
 Copyright 2022 MITRE Engenuity. Approved for public release. Document number
-CT0059
+CT0059.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License. You may obtain a copy of the
