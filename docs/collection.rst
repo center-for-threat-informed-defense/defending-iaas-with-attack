@@ -63,6 +63,10 @@ of collections easier than ever.
 
   Editing a collection in ATT&CK Workbench is easier than ever.
 
+For more information on building collections in Workbench, refer to the
+`Workbench documentation
+<https://github.com/center-for-threat-informed-defense/attack-workbench-frontend/blob/master/docs/collections.md>`__.
+
 Visualize the Collection
 ------------------------
 

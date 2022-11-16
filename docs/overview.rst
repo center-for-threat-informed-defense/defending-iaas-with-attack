@@ -18,7 +18,7 @@ community organizations can use the :doc:`project methodology <methodology>` to
 create custom collections of techniques that are tailored to their exact
 circumstances and needs.
 
-Motivation
+Background
 ----------
 
 .. figure:: _static/attack_surface.png
@@ -29,29 +29,38 @@ Motivation
 
   Click to view full size.
 
-Organizations using Infrastructure-as-a-Service (IaaS) need to understand the
-techniques adversaries can use against them--whether they occur at the cloud
-management layer, the container technology, or virtual machines. Organizations
-seeking a holistic view of adversary activities need to draw from multiple
-ATT&CK matrices. For example, you might consult the following:
+`MITRE ATT&CK® <https://attack.mitre.org>`__ is a globally accessible knowledge
+base of adversary tactics and techniques based on real-world observation. The
+ATT&CK knowledge base represents adversary goals as tactics and specific
+behaviors to achieve those goals as techniques and sub-techniques. This project
+leverages the knowledge base and its underlying data model to produce a
+collection of ATT&CK techniques that is tailored to a Linux IaaS cloud
+architecture.
 
-* `Linux Matrix <https://attack.mitre.org/matrices/enterprise/linux/>`__
-* `Cloud (IaaS) Matrix <https://attack.mitre.org/matrices/enterprise/cloud/iaas/>`__
-* `Containers Matrix <https://attack.mitre.org/matrices/enterprise/containers/>`__
+Initially, ATT&CK was focused on the Windows enterprise environment. Later
+versions integrated macOS and Linux into what is commonly known as "ATT&CK for
+Enterprise". With broader adoption and numerous contributions from the
+cybersecurity community, ATT&CK eventually added Mobile and ICS technology
+domains. Within each of these domains, a platform defines the system an
+adversary operates in, for example Microsoft Azure or PRE.
 
-Keeping track of techniques across three different matrices can be difficult,
-and you will also find that some techniques do not apply to your architecture.
-(For example, this project excludes Windows techniques.) To this end, the
-Defending IaaS project defines a notional archictecture and a corresponding
-attack surface, then pulls together techniques from multiple matrices into a
-:doc:`single, convenient collection <collection>`. This collection can be used
-visualized, customized, or extended in ATT&CK Navigator and ATT&CK Workbench.
+A typical information system spans multiple platforms (e.g. Linux and Microsoft
+Azure) and even across technology domains (e.g. Enterprise and Mobile), which
+requires cyber defenders to track advesary behaviors that are defined in
+multiple matrices and platforms in the ATT&CK knowledge base.
+
+Keeping track of techniques across different matrices can be difficult, and you
+will also find some techniques do not apply to your architecture. (For example,
+the Defending IaaS collection excludes Windows techniques.) To that end, the
+project defines a notional archictecture and a corresponding attack surface,
+then pulls together techniques from multiple matrices into a :doc:`single,
+convenient collection <collection>`. This collection can be visualized,
+customized, or extended using ATT&CK Navigator and ATT&CK Workbench.
 
 Use Cases
 ---------
 
-The Defending IaaS collection and the associated methodology support the
-following use cases:
+The Defending IaaS collection and methodology support the following use cases:
 
 * Evaluate Security Controls
     * Visualize detective and preventive controls across the entire attack
@@ -62,6 +71,7 @@ following use cases:
 * Build End-to-End Threat Models
     * Understand the capabilities and impacts of end users vs insiders vs
       external actors.
+    * Develop cyber analytics for detecting adversary activity.
 * Simulate Adversary Behavior
     * Run tabletop exercises.
     * Build adversary emulation plans.

@@ -7,7 +7,7 @@ Organizations using Infrastructure-as-a-Service (IaaS) need to identify the
 MITRE ATT&CK® techniques that are pertinent to that architecture, whether they
 affect container technology, virtual machine technology, or the cloud management
 control plane. The Defending IaaS with ATT&CK project consists of a collection
-of ATTC&K techniques that target a typical Linux IaaS architecture, as well as
+of ATT&CK techniques that target a typical Linux IaaS architecture, as well as
 methodology to build custom collections that are tailored to any unique
 organization and scenario. The Defending IaaS collection can be used as-is; it
 can be customized and extended; or the methodology can be employed to create
