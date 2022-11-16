@@ -63,7 +63,7 @@ html_use_smartypants = False
 
 html_theme_options = {
     "analytics_id": "G-4CBK5B2TNM",
-    "display_version": True,
+    "display_version": False,
     "logo_only": True,
     "style_external_links": True,
 }

@@ -4,96 +4,87 @@ Overview
   Whenever you update overview.rst, also look at README.md and consider whether
   you should make a corresponding update there.
 
-.. epigraph::
+**Defending IaaS with ATT&CK** delivers a custom collection of MITRE ATT&CK®
+techniques that is tailored to the attack surface and threat model of a
+Linux-based, infrastructure-as-a-service (IaaS) environment. The project
+provides a notional architecture for this target environment and a
+:doc:`machine-readable collection <collection>` of ATT&CK techniques that can be
+used to plan and evaluate security controls.
 
-    “If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle.”
+Every organization is unique, and even within an organization there may be a
+variety of technical architectures. The collection delivered by this project
+targets a very specific technical architecture, but to support the wider
+community organizations can use the :doc:`project methodology <methodology>` to
+create custom collections of techniques that are tailored to their exact
+circumstances and needs.
 
-    -Sun Tzu
-
-Introduction
-------------
-Defending IAAS with ATT&CK delivers an approach to build custom threat collection objects that reflect adversary behaviors in modern cloud environments.
+Motivation
+----------
 
 .. figure:: _static/attack_surface.png
-   :alt: Visually depicts DIWA's attack surface.
-   :align: center
-   :width: 400
+  :target: ../_static/attack_surface.png
+  :alt: Visually depicts DIWA's attack surface.
+  :figwidth: 40%
+  :align: right
 
+  Click to view full size.
 
-Organizations using Infrastructure as a Service (IaaS) need to understand the
-techniques adversaries can use against them whether they occur at the cloud
-management layer, the container technology, or on hosted infrastructure.
-Organizations seeking a holistic view of adversary activities against IaaS would
-need to combine techniques across Linux, Cloud (IaaS), and Containers, examining
-each technique for relevancy to their environment.
+Organizations using Infrastructure-as-a-Service (IaaS) need to understand the
+techniques adversaries can use against them--whether they occur at the cloud
+management layer, the container technology, or virtual machines. Organizations
+seeking a holistic view of adversary activities need to draw from multiple
+ATT&CK matrices. For example, you might consult the following:
 
-Adapting the process outlined in the Cyber Threat Model Methodology, the
-Defending IaaS with ATT&CK® Project developed a methodology to identify and
-select techniques across multiple platforms that align to the IaaS attack
-surface. The procedure provides the community a straightforward and tailorable
-approach to identify, build, and share collections of techniques to provide a
-comprehensive view of adversary behavior.
+* `Linux Matrix <https://attack.mitre.org/matrices/enterprise/linux/>`__
+* `Cloud (IaaS) Matrix <https://attack.mitre.org/matrices/enterprise/cloud/iaas/>`__
+* `Containers Matrix <https://attack.mitre.org/matrices/enterprise/containers/>`__
 
-The Defending IaaS with ATT&CK methodology defines the attack surface, specifies
-platforms to include from the ATT&CK knowledge base, selects criteria to
-determine applicable techniques, builds the combined set of techniques into a
-collection, and visualizes the results into a matrix to interactively navigate
-techniques and create custom views using layers. The resulting collection of
-techniques can be extended to detect and mitigate adversarial activity.
-
-..
-    <!--Insert attack surface image here from infographic-->
+Keeping track of techniques across three different matrices can be difficult,
+and you will also find that some techniques do not apply to your architecture.
+(For example, this project excludes Windows techniques.) To this end, the
+Defending IaaS project defines a notional archictecture and a corresponding
+attack surface, then pulls together techniques from multiple matrices into a
+:doc:`single, convenient collection <collection>`. This collection can be used
+visualized, customized, or extended in ATT&CK Navigator and ATT&CK Workbench.
 
 Use Cases
 ---------
-DIWA is designed to support the following use cases:
 
-        + Passive Cyber Table Top Testing, Adversary Emulation Planning, and Pen
-          Testing.
-        + Expand Threat Collection to Security Stack Mappings for your CSP
-          (Azure, AWS , Google Cloud) for protect, detect, and response.
-        + End-to-End Threat Model –How this can be applied for multi-cloud
-          interoperable architectures (e.g., employee’s mobile device
-          (android/IoS), employee’s Windows/MacOS to organization’s leased CSP’s
-          IaaS and/or privately hosted on premise infrastructure).
+The Defending IaaS collection and the associated methodology support the
+following use cases:
 
-Scope
------
-This methodology does not include adding or extending other sources of CTI into
-the ATT&CK knowledge base. The resulting threat model from this process does not
-provide a risk determination, such as the likelihood that attack my occur and
-the resulting impact. The methodology does not provide a scoring rubric to
-evaluate an organization’s current security controls and their effectiveness –
-the adversarial behavior modeled in the collection may be used to support these
-and other use cases.
+* Evaluate Security Controls
+    * Visualize detective and preventive controls across the entire attack
+      surface.
+    * Combine with `Security Stack Mappings
+      <https://github.com/center-for-threat-informed-defense/security-stack-mappings>`__
+      to identify the pertinent security controls provided by your IaaS vendor.
+* Build End-to-End Threat Models
+    * Understand the capabilities and impacts of end users vs insiders vs
+      external actors.
+* Simulate Adversary Behavior
+    * Run tabletop exercises.
+    * Build adversary emulation plans.
+    * Conduct penetration testing / red team engagements.
 
-.. Important::
-  "CISA's Cloud Security Technical Reference Architecture report referenced uses the National Institute for Standards and Technology Special Publication 800-145: The NIST Definition of Cloud Computing as:“Consumers have the capability to provision computing resources to deploy and run environments and applications. Cloud providers manage the underlying infrastructure while the consumers have control over the computing resources, including some control of selected networking components…”
+Get Started
+-----------
 
-.. figure:: _static/reference_architecture.png
-   :alt: Visually depicts reference architecture components.
-   :align: center
-   :width: 400
-
-Get Involved
-------------
 There are several ways that you can get involved with this project and help
-advance threat-informed defense. Send your feedback to ctid@mitre-engenuity.org
-or post on `GitHub issues
-<https://github.com/center-for-threat-informed-defense/defending-iaas-with-attack/issues>`__.
+advance threat-informed defense:
 
-Notice
-------
-© 2022 MITRE Engenuity. Approved for public release. Document number CT0059.
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed
-under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-CONDITIONS OF ANY KIND, either express or implied. See the License for the
-specific language governing permissions and limitations under the License.
-
-This project makes use of ATT&CK®: `ATT&CK Terms of Use
-<https://attack.mitre.org/resources/terms-of-use/>`__
+* :newsgroup:`Review the collection.` The :doc:`collection <collection>` chapter describes
+  how the collection is consistuted and how you can use it.
+* :newsgroup:`Learn the methodology.` The Defending IaaS collection is helpful
+  in its own right, but the :doc:`methodology <methodology>` is provided for
+  organizations to create their own tailored collections.
+* :newsgroup:`Build and share your own collections!` ATT&CK Workbench is
+  upgraded with new features to make it easier than ever to build your own
+  collections. You can use custom collections privately or publish them to
+  benefit the community.
+* :newsgroup:`Tell us what you think.` Find us `on LinkedIn
+  <https://www.linkedin.com/showcase/center-for-threat-informed-defense/>`__ or
+  post on `the GitHub repository
+  <https://github.com/center-for-threat-informed-defense/defending-iaas-with-attack>`__.
+  Let us know how you're using the project and what ideas you have to improve
+  it.

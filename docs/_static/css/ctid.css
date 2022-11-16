@@ -94,6 +94,14 @@ em.newsgroup {
     position: absolute;
 }
 
+.rst-content.style-external-links a.reference.external.image-reference {
+    padding-right: 0;
+}
+
+.rst-content.style-external-links a.reference.external.image-reference:after {
+    display: none;
+}
+
 /* Bootstrap button styles */
 
 .btn,
@@ -254,6 +262,14 @@ em.newsgroup {
     font-size: 10pt;
     font-style: initial;
     color: #999;
+}
+
+/* Blockquote style */
+
+blockquote {
+    border-left: 3px solid var(--me-core-gray-light);
+    margin-left: 0;
+    padding-left: 1em;
 }
 
 /* Epigraph styles */

@@ -1,58 +1,124 @@
 Methodology
 ===========
 
-Cyber Threat Model Methodology
-------------------------------
+The Defending IaaS with ATT&CK project developed a methodology to identify and
+select techniques across multiple ATT&CK matrices that align to the project's
+defined attack surface. We are shaing this approach with the community
+so that you can build and share your own collections of techniques that are
+tailored to any architecture or threat model that you care about.
+
+Identify Attack Surface
+-----------------------
 
 .. figure:: _static/threat_model.png
-   :alt: Visually depicts 5 steps of threat model.
-   :align: center
-   :scale: 20%
+  :target: ../_static/threat_model.png
+  :alt: The 5 steps of the methodology.
+  :figwidth: 40%
+  :align: right
 
+  Click to enlarge.
 
-**The cyber threat model methodology consists of 5 steps:**
+The first step is identify the attack surface. Identify the system components
+that are in scope, the range of technologies comprising the system, and the user
+archetypes involved in the system. Delineate the security boundary, especially
+in vendor scenarios where responsibilties may be shared or delegated to a
+trusted partner organization.
 
+In the Defending IaaS collection, the infrastructure-as-a-service (IaaS) attack
+surface is defined as adversary activities against application containers,
+virtual machines, or the cloud management control plane. The user roles include
+various levels of permissions, from end users to trusted insiders to external
+adversaries.
 
-1. Identify the Attack Surface: Select the domains and platforms to include in the threat model
-    The Infrastructure as a Service (IaaS) attack surface is defined as adversary activities against the cloud management layer, container, technology, or on hosted infrastructure.
+Compile Sources
+---------------
 
-2.Compile Source Data: Identify and import sets of ATT&CK techniques
+The second step is to identify and import sets of ATT&CK techniques from the
+relevant [ATT&CK matrices](https://attack.mitre.org/matrices/). The techniques
+in scope for the Defending IaaS collection are spread across several matrices:
 
-    MITRE ATT&CK techniques applicable to IaaS are currently spread across Cloud (IaaS), Container, and Linux platforms. The first step to identify and applicable subset of techniques is to combine the data sets from these three
-    platforms. The Cloud and Container platforms in ATT&CK for Enterprise describe adversary techniques at the cloud management and container technology layers, but do not include techniques that apply to the system
-    being hosted. Similarly, while the Linux platform captures all techniques that can be used on Linux systems, not all are applicable to cloud-hosted
-    Linux servers or to Linux containers. Some techniques (e.g., Event-Triggered Execution: Screensaver - T1546.002) do not apply to headless, hosted Linux because the affected service or feature is disabled or hidden. The final
-    collection of techniques that encompass attack surface for IaaS is a combination of techniques in the Cloud (IaaS) platform, the Container, platform, and a subset of the techniques in the Linux platform.
+* `Linux Matrix <https://attack.mitre.org/matrices/enterprise/linux/>`__
+* `Cloud (IaaS) Matrix <https://attack.mitre.org/matrices/enterprise/cloud/iaas/>`__
+* `Containers Matrix <https://attack.mitre.org/matrices/enterprise/containers/>`__
+* `PRE Matrix <https://attack.mitre.org/matrices/enterprise/pre/>`__
+* The Center for Threat-Informed Defense `Insider Threat TTP KB <https://github.com/center-for-threat-informed-defense/insider-threat-ttp-kb>`__
 
-3.Define Selection Criteria: Specify the rules used to include or exclude techniques
-    The selection criteria for the IaaS will focus on techniques that are applicable to the cloud and container-based instances of Linux, to also include management and orchestration applications and utilities available from service providers. For Iaas, the criteria used to select techniques can be further defined into three areas of focus: physical, operational, and
-    environmental. Physical criteria are used to determine if the collection will include techniques based on physical characteristics of the system. Techniques in this section would exclude attacks that target the underlying physical technology. Examples of these components include physical servers, firmware, hypervisor, and some elements of networking.
-        +   Exclude techniques that rely on physical access or that target hardware (physical servers, firmware, hypervisor, and networking hardware)
-        +   Exclude techniques that target service provider-managed components, such as physical security, storage, servers, and virtualization
+The Cloud and Container matrices in ATT&CK for Enterprise describe adversary
+techniques at the cloud management and container technology layers, but do not
+include techniques that apply to the system being hosted. This is why multiple
+sources are consulted: to create a broad overlay of all the techniques that are
+relevant to our target architecture.
 
-    Operational criteria are used to determine if the collection will include
-    techniques based on functional characteristics such as how the system is
-    intended to operate. There are numerous definitions of cloud service models.
-    Examples of these technology components include operating system (Linux),
-    applications, networking, authentication and access management services.
+The techniques from all of these sources are combined together to form a list of
+candidates for our collection, but some of these techniques will not apply to
+the specific architecture targeted by this project. The next step develops the
+criteria to determine which candidate techniques are downselected into the final
+collection.
 
-        +   Exclude techniques specific to workstations, end-users, Virtual Desktop Infrastructure (VDI), or similar workspace-as-a-service offerings
-        +   Exclude operating system services and components that manage hardware or system components
-        +   Exclude applications and extensions that are typically associated with workstation or end-user systems, such as email clients and web browser
-        +   Include 3rd party applications and runtimes, for example SQL server or Java, with the condition that the underlying technology are present
-        +   Include tools provided by service provider, or 3rd parties, that are used to build and orchestrate cloud systems
+Define Criteria
+---------------
 
-    Environmental criteria are used to determine if the collection takes into
-    consideration exceptional aspects or characteristics that are specific to
-    the environment. This section intends to address nuances of adversary
-    behavior that may vary, depending on the environment’s technology deployment
-    or operations.
+The third step is to define criteria that can be applied to the candidate
+techniques in order to rule out techniques that do no pertain to the target
+architecture.
 
-        +   Exclude techniques that do not align with common best practices for IaaS, for example, automated provisioning, scaling, and data recovery
-        +   Exclude techniques that require end-user interaction
+While the Linux platform captures all techniques that can be used on Linux
+systems, not all are applicable to our target architecture of Linux virtual
+machines and containers running on an IaaS platform. For example, `T1113 -
+Screen Capture <https://attack.mitre.org/techniques/T1113/>`__ does not apply to
+a headless container or virtual machine. Alternatively `T1542.001 - Pre-OS Boot:
+System Firmware <https://attack.mitre.org/techniques/T1542/001/>`__ may apply to
+the architecture in a technical sense--i.e. the machine does have firmware--but
+the firmware is either covered up by the IaaS abstraction and/or it is the
+responsibility of the IaaS vendor.
 
-4. Review Applicable Techniques
-    Apply the selection criteria defined in (3) to the combined set of ATT&CK techniques identified in (2). Adding comments to explain the rationale behind each technique will be helpful when modifying the collection through periodic reviews, or as needed when the organization and systems change. +   T1052.001: Exfiltration over Physical Medium: Exfiltration over USB– this technique is excluded from the collection as it relies on adversary access to physical media which is out of scope for IaaS physical criteria
+For Defending Iaas, the criteria focus on three key areas:
 
-5. Create a Collection
-    The final step is to publish the techniques in a collection. Use ATT&CK Workbench API access, or export the customized collection as a STIX bundle, and import into ATT&CK Navigator to display a matrix and interactively navigate and define custom views using layers.
+1. **Physical criteria select techniques based on physical characteristics of
+   the system.** Techniques in this section would exclude attacks that target
+   the underlying physical technology.
+
+   a. Exclude techniques that rely on physical access or that target hardware:
+      physical servers, firmware, hypervisor, and networking hardware.
+   b. Exclude techniques that target the IaaS vendor-managed components, such
+      as physical security, storage, servers, and virtualization.
+
+2. **Operational criteria select techniques based on how the system is intended
+   to operate.** There are numerous definitions of cloud service models.
+   Examples of these technology components include operating system (Linux),
+   applications, networking, authentication and access management services.
+
+   a. Exclude techniques specific to workstations, end-users, Virtual Desktop
+      Infrastructure (VDI), or similar workspace-as-a-service offerings.
+   b. Exclude operating system services and components that manage hardware or
+      system components.
+   c. Exclude applications and extensions that are typically associated with
+      workstation or end-user systems, such as email clients and web browser.
+   d. Include 3rd party applications and runtimes if they are present in the
+      environment, for example SQL server or Java.
+   e. Include tools provided by the IaaS vendor or 3rd parties to build and
+      orchestrate cloud systems.
+
+3. **Environmental select techniques based on the environment in which the
+   system runs.** This section intends to address nuances of adversary behavior
+   that may vary, depending on the environment’s technology deployment or
+   operations.
+
+   a. Exclude techniques that do not align with common best practices for
+      IaaS, such as automated provisioning, scaling, and data recovery.
+   b. Exclude techniques that require end-user interaction.
+
+Select Techniques
+-----------------
+
+The fourth step is applying the criteria to determine which techniques to include
+in the collection. During this process, we recommend adding notes or comments to explain the rationale behind the inclusion or exclusion of each technique. These annotations are helpful later for extending, modifying, or updating the collection when the underlying architecture changes. The rationale for each technique can also clarify ambiguity.
+
+Build Collection
+----------------
+
+The final step is to assemble the techniques into a collection (e.g. inside of
+ATT&CK Workbench) and export the collection as a machine-readable STIX bundle in
+order to share without your organization or externally. The STIX bundle can be
+loaded into ATT&CK Navigator for visualization or processed using other
+STIX-compatible tools.
