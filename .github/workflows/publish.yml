@@ -42,15 +42,22 @@ jobs:
     if: github.ref_name == 'main'
     needs: docs
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
     - name: Download HTML docs
       uses: actions/download-artifact@v3
       with:
         name: diwa_docs_html
         path: docs
-    - name: Publish to GitHub pages
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs
+        path: ./docs
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
