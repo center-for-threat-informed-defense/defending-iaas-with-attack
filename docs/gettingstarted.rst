@@ -1,7 +1,7 @@
 Getting Started
 ===============
 
-Navigator
+`Navigator <https://center-for-threat-informed-defense.github.io/attack-navigator/>`_
 ---------
 ATT&CK Navigator is designed to provide basic navigation and annotation of
 ATT&CK matrices. It can be used to visualize defensive coverage, red/blue team
@@ -13,7 +13,14 @@ creation of new views, there are variety of ways to display tactics and
 techniques and their importance. The utility of Navigator is key to visualizing
 and accomplishing related use cases for the collection of IaaS techniques.
 
-Workbench
+
+.. figure:: _static/CTID_Navigator_Matrix.png
+   :alt: CTID's Navigator for DIWA.
+   :align: center
+   :scale: 50%
+
+
+`Workbench <https://github.com/center-for-threat-informed-defense/attack-workbench-frontend>`_
 ---------
 ATT&CK Workbench is a tool to explore, create, annotate, and share extensions of
 a local version of ATT&CK – drastically reducing the barriers for defenders to
@@ -22,7 +29,16 @@ knowledge base. The utility of Workbench to create collections of techniques
 comprised of new objects or existing objects with new content is at the core of
 this methodology.
 
-MITRE ATT&CK
+.. note::
+    Collections are sets of related ATT&CK objects, and may be used to represent specific releases of a dataset such as “Enterprise ATT&CK v12.0” or any other set of objects one may want to share with someone else.
+
+.. figure:: _static/workbench_t1592_screenshot.png
+   :alt: Screenshot of Workbench with notes for T1592.
+   :align: center
+   :scale: 50%
+
+
+`MITRE ATT&CK <https://attack.mitre.org/>`_
 ------------
 ATT&CK® is a globally accessible knowledge base of adversary tactics and
 techniques based on real-world observations. The ATT&CK knowledge base
@@ -49,3 +65,4 @@ advance threat-informed defense:
       methodology and tools needed to build collections tailored to any need.
       You can build proprietary collections to use within your organization, or
       you can publish collections to benefit the community.
+
