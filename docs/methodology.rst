@@ -5,7 +5,10 @@ The Defending IaaS with ATT&CK project developed a methodology to identify and
 select techniques across multiple ATT&CK matrices that align to the project's
 defined attack surface. We are sharing this approach with the community
 so that you can build and share your own collections of techniques that are
-tailored to any architecture or threat model that you care about.
+tailored to any architecture for a comprehensive and unique view ofadversary 
+behavior.
+
+
 
 Identify Attack Surface
 -----------------------
@@ -24,8 +27,8 @@ and the user archetypes involved in the system. Delineate the security boundary,
 especially in vendor scenarios where responsibilties may be shared with or
 delegated to a partner organization.
 
-In the Defending IaaS collection, the attack surface is defined over the
-application containers, virtual machines, or the cloud management control plane.
+In the Defending IaaS collection, the attack surface is defined as the
+application containers, virtual machines, or the cloud management layer.
 The user roles include various levels of permissions, from end users to trusted
 insiders to external adversaries.
 
@@ -60,7 +63,12 @@ Define Criteria
 
 The third step is to define criteria that can be applied to the candidate
 techniques in order to select the techniques that pertain to the target
-architecture.
+architecture. Criteria can vary from specific to more general, have both
+inclusive and exclusive rules, and will be driven by the source data. The
+goal of the selection criteria should offer clear guidance in refining the
+list of techniques from the compiled domains and platforms, while avoiding 
+being overly burdensome in reviewing every technique in depth. When reviewing 
+the techniques, additional criteria may be added later.
 
 While the Linux platform captures all techniques that can be used on Linux
 systems, not all are applicable to our target architecture (Linux virtual
