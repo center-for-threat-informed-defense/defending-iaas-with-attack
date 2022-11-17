@@ -32,7 +32,7 @@ collections.
 | [Documentation](https://center-for-threat-informed-defense.github.io/defending-iaas-with-attack/) | Documentation for Defending IaaS with ATT&CK, including methodology and technical deep dive. |
 | [ATT&CK Navigator](https://center-for-threat-informed-defense.github.io/attack-navigator/) | A customized ATT&CK Navigator that embeds the Defending IaaS collection under the "Create New Layer" option. |
 | [ATT&CK Workbench](https://github.com/center-for-threat-informed-defense/attack-workbench-frontend) | Upgrades to ATT&CK Workbench facilitate creating new collections for projects such as this one. |
-| [Defending IaaS Collection](./data/defending-iaas-0.1.json/) | The collection of techniques represented as a machine-readable STIX bundle. |
+| [Defending IaaS Collection](./data/) | The collection of techniques in Excel format as well as a machine-readable format (STIX). |
 
 ## Getting Involved
 
