@@ -1,9 +1,10 @@
 Collection
 ==========
 
-The Defending IaaS collection contains 277 ATT&CK techniques selected according
-to our documented :doc:`methodology <methodology>`. It does not include
-techniques from any sources other than ATT&CK.
+The Defending IaaS collection drew from 510 total techniques and subtechniques
+across five ATT&CK domains. It does not include techniques from any sources
+other than ATT&CK. Of these, 373 [sub-]techniques are included in the collection
+and the remaining 137 are excluded.
 
 .. figure:: _static/sankey.png
   :alt: A sankey diagram showing how techniques were canvassed from multiple ATT&CK matrices.
@@ -14,12 +15,15 @@ techniques from any sources other than ATT&CK.
 
 .. note::
 
-  The threat model that results from this process does not provide a risk
-  determination, i.e. the likelihood of successful attack or the resulting
-  impact. The methodology does not provide a scoring rubric to evaluate an
-  organization’s current security controls and their effectiveness. The
-  adversarial behavior modeled in the collection may be used to support these
-  and other use cases.
+  Due to the overlap in ATT&CK techniques across different domains, the final
+  count of unique [sub-]techniques in the collection is 277.
+
+The threat model that results from this process does not provide a risk
+determination, i.e. the likelihood of successful attack or the resulting
+impact. The methodology does not provide a scoring rubric to evaluate an
+organization’s current security controls and their effectiveness. The
+adversarial behavior modeled in the collection may be used to support these
+and other use cases.
 
 Architecture
 ------------
