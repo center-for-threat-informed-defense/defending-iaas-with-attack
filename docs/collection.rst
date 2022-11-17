@@ -1,16 +1,16 @@
 Collection
 ==========
 
-The Defending IaaS collection contains 380 ATT&CK techniques selected according
+The Defending IaaS collection contains 277 ATT&CK techniques selected according
 to our documented :doc:`methodology`. It does not include techniques from any
 sources other than ATT&CK.
 
-.. figure:: _static/sankey.png
+.. figure:: _static/sankey_final.png
   :alt: A sankey diagram showing how techniques were canvassed from multiple ATT&CK matrices.
   :align: center
 
   The Defending IaaS collection pulls together multiple ATT&CK matrices and
-  then selects those techniques that are pertinent to our target architecture.
+  then selects those techniques that are applicable to our architecture.
 
 .. note::
 
@@ -25,7 +25,7 @@ Architecture
 ------------
 
 .. figure:: _static/reference_architecture.png
-  :target: ../_static/reference_architecture.png
+  :target: ../_static/reference_architecture_final.png
   :alt: The components of the reference architecture.
   :align: right
   :figwidth: 40%
@@ -42,7 +42,7 @@ National Institute for Standards and Technology (NIST) SP 800-145:
 
 This separation of responsibilities is a focal point for the Defending IaaS
 collection. The collection includes ATT&CK techniques that pertain to the
-"Agency Managed" components seen in the architecture diagram to the right.
+"Customer Managed" components seen in the architecture diagram to the right.
 
 This architecture and division of responsibility are tailored to the Defending
 IaaS project and its chosen attack surface, but in general the methodology can
@@ -108,5 +108,5 @@ Download the Collection
 
 You can also `download the collection
 <https://github.com/center-for-threat-informed-defense/defending-iaas-with-attack/tree/main/data>`__
-in machine-readable format (STIX JSON) for use in other tools or if you want to
-write custom software to process the collection.
+in machine-readable format (STIX JSON) or spreadsheet for use in other tools 
+or if you want to write custom software to process the collection.
