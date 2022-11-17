@@ -6,8 +6,8 @@ MITRE ATT&CK® techniques tailored to the unique attack surface and threat model
 for **Infrastructure-as-a-Service (IaaS)**. This collection can be used to plan
 and evaluate security controls for organizations that use IaaS based on the
 known adversary behaviors described by ATT&CK. The project methodology is also
-documented so that organizations can create their own customized collection and
-tailor it to their unique circumstances and needs.
+documented so that organizations can create their own customized collections
+tailored to their unique needs and circumstances.
 
 This project is created and maintained by the `MITRE Engenuity Center for
 Threat-Informed Defense <https://ctid.mitre-engenuity.org/>`__ in futherance of

@@ -3,7 +3,7 @@ Methodology
 
 The Defending IaaS with ATT&CK project developed a methodology to identify and
 select techniques across multiple ATT&CK matrices that align to the project's
-defined attack surface. We are shaing this approach with the community
+defined attack surface. We are sharing this approach with the community
 so that you can build and share your own collections of techniques that are
 tailored to any architecture or threat model that you care about.
 
@@ -18,24 +18,24 @@ Identify Attack Surface
 
   Click to enlarge.
 
-The first step is identify the attack surface. Identify the system components
-that are in scope, the range of technologies comprising the system, and the user
-archetypes involved in the system. Delineate the security boundary, especially
-in vendor scenarios where responsibilties may be shared or delegated to a
-trusted partner organization.
+The first step is to identify the attack surface. This includes the system
+components that are in scope, the range of technologies comprising the system,
+and the user archetypes involved in the system. Delineate the security boundary,
+especially in vendor scenarios where responsibilties may be shared with or
+delegated to a partner organization.
 
-In the Defending IaaS collection, the infrastructure-as-a-service (IaaS) attack
-surface is defined as adversary activities against application containers,
-virtual machines, or the cloud management control plane. The user roles include
-various levels of permissions, from end users to trusted insiders to external
-adversaries.
+In the Defending IaaS collection, the attack surface is defined over the
+application containers, virtual machines, or the cloud management control plane.
+The user roles include various levels of permissions, from end users to trusted
+insiders to external adversaries.
 
 Compile Sources
 ---------------
 
 The second step is to identify and import sets of ATT&CK techniques from the
-relevant [ATT&CK matrices](https://attack.mitre.org/matrices/). The techniques
-in scope for the Defending IaaS collection are spread across several matrices:
+relevant `ATT&CK matrices <https://attack.mitre.org/matrices/>`__. The
+techniques in scope for the Defending IaaS collection are spread across several
+matrices:
 
 * `Linux Matrix <https://attack.mitre.org/matrices/enterprise/linux/>`__
 * `Cloud (IaaS) Matrix <https://attack.mitre.org/matrices/enterprise/cloud/iaas/>`__
@@ -50,7 +50,7 @@ sources are consulted: to create a broad overlay of all the techniques that are
 relevant to our target architecture.
 
 The techniques from all of these sources are combined together to form a list of
-candidates for our collection, but some of these techniques will not apply to
+candidates for the collection, but some of these techniques will not apply to
 the specific architecture targeted by this project. The next step develops the
 criteria to determine which candidate techniques are downselected into the final
 collection.
@@ -59,18 +59,18 @@ Define Criteria
 ---------------
 
 The third step is to define criteria that can be applied to the candidate
-techniques in order to rule out techniques that do no pertain to the target
+techniques in order to select the techniques that pertain to the target
 architecture.
 
 While the Linux platform captures all techniques that can be used on Linux
-systems, not all are applicable to our target architecture of Linux virtual
-machines and containers running on an IaaS platform. For example, `T1113 -
+systems, not all are applicable to our target architecture (Linux virtual
+machines and containers running on an IaaS platform). For example, `T1113 -
 Screen Capture <https://attack.mitre.org/techniques/T1113/>`__ does not apply to
 a headless container or virtual machine. Alternatively `T1542.001 - Pre-OS Boot:
 System Firmware <https://attack.mitre.org/techniques/T1542/001/>`__ may apply to
-the architecture in a technical sense--i.e. the machine does have firmware--but
-the firmware is either covered up by the IaaS abstraction and/or it is the
-responsibility of the IaaS vendor.
+in a technical sense--i.e. the machine does have firmware--but the firmware is
+either hidden by the IaaS abstraction and/or it is the responsibility of the
+IaaS vendor.
 
 For Defending Iaas, the criteria focus on three key areas:
 
@@ -99,10 +99,9 @@ For Defending Iaas, the criteria focus on three key areas:
    e. Include tools provided by the IaaS vendor or 3rd parties to build and
       orchestrate cloud systems.
 
-3. **Environmental select techniques based on the environment in which the
-   system runs.** This section intends to address nuances of adversary behavior
-   that may vary, depending on the environment’s technology deployment or
-   operations.
+3. **Environmental criteria select techniques based on the environment in which
+   the system runs.** This section addresses nuances of adversary behavior that
+   may vary, depending on the environment’s technology deployment or operations.
 
    a. Exclude techniques that do not align with common best practices for
       IaaS, such as automated provisioning, scaling, and data recovery.
@@ -111,8 +110,12 @@ For Defending Iaas, the criteria focus on three key areas:
 Select Techniques
 -----------------
 
-The fourth step is applying the criteria to determine which techniques to include
-in the collection. During this process, we recommend adding notes or comments to explain the rationale behind the inclusion or exclusion of each technique. These annotations are helpful later for extending, modifying, or updating the collection when the underlying architecture changes. The rationale for each technique can also clarify ambiguity.
+The fourth step is applying the criteria to determine which techniques to
+include in the collection. During this process, we recommend adding notes or
+comments to explain the rationale behind the inclusion or exclusion of each
+technique. These annotations are helpful later for extending, modifying, or
+updating the collection when the underlying architecture changes. The rationale
+for each technique can also clarify ambiguities in the process.
 
 Build Collection
 ----------------

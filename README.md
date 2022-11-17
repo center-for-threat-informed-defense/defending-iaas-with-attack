@@ -5,13 +5,12 @@
 
 Organizations using Infrastructure-as-a-Service (IaaS) need to identify the
 MITRE ATT&CK® techniques that are pertinent to that architecture, whether they
-affect container technology, virtual machine technology, or the cloud management
-control plane. The Defending IaaS with ATT&CK project consists of a collection
-of ATT&CK techniques that target a typical Linux IaaS architecture, as well as
-methodology to build custom collections that are tailored to any unique
-organization and scenario. The Defending IaaS collection can be used as-is; it
-can be customized and extended; or the methodology can be employed to create
-entirely new collections.
+affect container technology, virtual machines, or the cloud management control
+plane. The Defending IaaS with ATT&CK project consists of a collection of ATT&CK
+techniques that target a notional Linux IaaS architecture, as well as
+methodology to build custom collections that can be tailored to any unique
+organization and scenario. The Defending IaaS collection can be used as-is, or
+the methodology can be employed to develop entirely new collections.
 
 **Table Of Contents:**
 
@@ -20,12 +19,11 @@ entirely new collections.
 - [Questions and Feedback](#questions-and-feedback)
 - [Notice](#notice)
 
-
 ## Getting Started
 
 The best place to start is with the documentation: this will familiarize you
-with the project, the methodology, and resulting collection of techniques. Next,
-view the collection in ATT&CK Navigator. For a deeper dive, upgrade to the
+with the project goals, the methodology, and the collection of techniques. Next,
+visualize the collection in ATT&CK Navigator. For a deep dive, upgrade to the
 latest version of ATT&CK Workbench and use its new features to create your own
 collections.
 
@@ -34,7 +32,7 @@ collections.
 | [Documentation](https://center-for-threat-informed-defense.github.io/defending-iaas-with-attack/) | Documentation for Defending IaaS with ATT&CK, including methodology and technical deep dive. |
 | [ATT&CK Navigator](https://center-for-threat-informed-defense.github.io/attack-navigator/) | A customized ATT&CK Navigator that embeds the Defending IaaS collection under the "Create New Layer" option. |
 | [ATT&CK Workbench](https://github.com/center-for-threat-informed-defense/attack-workbench-frontend) | Upgrades to ATT&CK Workbench facilitate creating new collections for projects such as this one. |
-| [Defending IaaS Collection](/data/defending-iaas-0.1.json/) | The collection of techniques represented as a machine-readable STIX bundle. |
+| [Defending IaaS Collection](./data/defending-iaas-0.1.json/) | The collection of techniques represented as a machine-readable STIX bundle. |
 
 ## Getting Involved
 

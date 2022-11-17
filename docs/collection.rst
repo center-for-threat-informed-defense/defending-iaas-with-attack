@@ -12,12 +12,14 @@ sources other than ATT&CK.
   The Defending IaaS collection pulls together multiple ATT&CK matrices and
   then selects those techniques that are pertinent to our target architecture.
 
-The resulting threat model from this process does not provide a risk
-determination, such as the likelihood that attack my occur and the resulting
-impact. The methodology does not provide a scoring rubric to evaluate an
-organization’s current security controls and their effectiveness – the
-adversarial behavior modeled in the collection may be used to support these and
-other use cases.
+.. note::
+
+  The threat model that results from this process does not provide a risk
+  determination, i.e. the likelihood of successful attack or the resulting
+  impact. The methodology does not provide a scoring rubric to evaluate an
+  organization’s current security controls and their effectiveness. The
+  adversarial behavior modeled in the collection may be used to support these
+  and other use cases.
 
 Architecture
 ------------
@@ -38,10 +40,9 @@ National Institute for Standards and Technology (NIST) SP 800-145:
     infrastructure while the consumers have control over the computing
     resources, including some control of selected networking components…
 
-This separation of responsibilities in cloud architectures is the single most
-important concept for the Defending IaaS project. The collection includes ATT&CK
-techniques that pertain to the "Agency Managed" components seen in the
-architecture diagram to the right.
+This separation of responsibilities is a focal point for the Defending IaaS
+collection. The collection includes ATT&CK techniques that pertain to the
+"Agency Managed" components seen in the architecture diagram to the right.
 
 This architecture and division of responsibility are tailored to the Defending
 IaaS project and its chosen attack surface, but in general the methodology can
@@ -107,5 +108,5 @@ Download the Collection
 
 You can also `download the collection
 <https://github.com/center-for-threat-informed-defense/defending-iaas-with-attack/tree/main/data>`__
-in machine-readable format (STIX JSON) for use in other tools or in case you
-want to write custom software to process the collection.
+in machine-readable format (STIX JSON) for use in other tools or if you want to
+write custom software to process the collection.

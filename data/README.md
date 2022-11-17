@@ -1,13 +1,11 @@
-# Defending IaaS with ATT&CK Threat Collection
+# Defending IaaS with ATT&CK Collection
 
-The DIWA threat collection was built using ATT&CK workbench to provide cyber analysts with a file that's easily shared in STIX JSON format. 
-This collection includes 277 unique MITRE ATT&CK tactics, techniques, or procedures that were deemed applicable for IaaS along with notes that include the justification for cloud technologies. 
+The Defending IaaS collection contains all of the techniques determined to be in
+scope for the project's notional architecture. The collection can be downloaded
+in machine-readable format
+([STIX](https://oasis-open.github.io/cti-documentation/stix/gettingstarted.html))
+from this page. The machine-readable format can be visualized in ATT&CK
+Navigator or edited in ATT&CK Workbench.
 
-
-## Collections
-Collections are sets of related ATT&CK objects, and may be used to represent specific releases of a dataset such as “Enterprise ATT&CK v9.0” or any other set of objects one may want to share with someone else.## STIX
-Structured Threat Information Expression (STIX™) is a language and serialization format used to exchange cyber threat intelligence (CTI).
-
-## STIX
-STIX enables organizations to share CTI with one another in a consistent and machine-readable manner, allowing security communities to better understand what computer-based attacks they are most likely to see and to anticipate and/or respond to those attacks faster and more effectively.
-STIX is designed to improve different capabilities, such as collaborative threat analysis, automated threat exchange, automated detection and response, and more.
+For more information, see the [collection
+documentation](https://center-for-threat-informed-defense.github.io/defending-iaas-with-attack/collection/).
