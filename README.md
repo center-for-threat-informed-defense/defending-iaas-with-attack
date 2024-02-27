@@ -21,16 +21,14 @@ the methodology can be employed to develop entirely new collections.
 
 ## Getting Started
 
-The best place to start is with the documentation: this will familiarize you
-with the project goals, the methodology, and the collection of techniques. Next,
-visualize the collection in ATT&CK Navigator. For a deep dive, upgrade to the
-latest version of ATT&CK Workbench and use its new features to create your own
-collections.
+The best place to start is with the documentation: this will familiarize you with the
+project goals, the methodology, and the collection of techniques. For a deep dive,
+upgrade to the latest version of ATT&CK Workbench and use its new features to create
+your own collections.
 
 | Resource | Description |
 | -------- | ----------- |
 | [Documentation](https://center-for-threat-informed-defense.github.io/defending-iaas-with-attack/) | Documentation for Defending IaaS with ATT&CK, including methodology and technical deep dive. |
-| [ATT&CK Navigator](https://center-for-threat-informed-defense.github.io/attack-navigator/) | A customized ATT&CK Navigator that embeds the Defending IaaS collection under the "Create New Layer" option. |
 | [ATT&CK Workbench](https://github.com/center-for-threat-informed-defense/attack-workbench-frontend) | Upgrades to ATT&CK Workbench facilitate creating new collections for projects such as this one. |
 | [Defending IaaS Collection](./data/) | The collection of techniques in Excel format as well as a machine-readable format (STIX). |
 

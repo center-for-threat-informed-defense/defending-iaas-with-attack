@@ -62,11 +62,11 @@ As part of this project, we updated Workbench to make the creation and sharing
 of collections easier than ever.
 
 .. figure:: _static/workbench.png
-  :target: ../_static/workbench.png
   :alt: Screenshot of editing a collection in ATT&CK Workbench.
   :align: center
+  :width: 75%
 
-  Editing a collection in ATT&CK Workbench is easier than ever.
+  Editing a collection in ATT&CK Workbench is easier than ever. (Click to enlarge)
 
 For more information on building collections in Workbench, refer to the
 `Workbench documentation
@@ -75,31 +75,25 @@ For more information on building collections in Workbench, refer to the
 Visualize the Collection
 ------------------------
 
-There are several ways to access the Defending IaaS collection. The easiest way
-is to load it as a base layer in ATT&CK Navigator:
+.. raw:: html
 
-.. figure:: _static/navigator_button.png
-  :alt: Screenshot of creating a Defending IaaS layer in ATT&CK Navigator.
-  :align: center
-  :width: 75%
+    <p>
+        <a class="btn btn-primary" target="_blank" href="https://mitre-attack.github.io/attack-navigator/#bundleURL=https%3A%2F%2Fraw.githubusercontent.com%2Fcenter-for-threat-informed-defense%2Fdefending-iaas-with-attack%2Fmain%2Fdata%2Fdefending-iaas-1.0.json&version=11&domain=defending-iaas">
+        <i class="fa fa-map-signs"></i> Open "Defending IAAS" in ATT&CK Navigator</a>
+    </p>
 
-  Intialize a Navigator layer with the Defending IaaS collection.
-
-1. Go to our `customized ATT&CK Navigator
-   <https://center-for-threat-informed-defense.github.io/attack-navigator/>`__.
-2. Select "Create New Layer" and then click "Defending IaaS Collection".
-
-This will intialize a new ATT&CK Navigator layer containing all of the techniques
-from the Defending IaaS collection.
+There are several ways to access the Defending IaaS collection. The easiest way is to
+load it as a base layer in ATT&CK Navigator by clicking the button above. This will
+intialize a new ATT&CK Navigator layer containing all of the techniques from the
+Defending IaaS collection.
 
 .. figure:: _static/navigator.png
-  :target: ../_static/navigator.png
   :alt: Screenshot of newly created ATT&CK Navigator layer.
   :align: center
   :width: 75%
 
   Visualizing the Defending IaaS collection as a Navigator layer. (Click to
-  enlarge.)
+  enlarge)
 
 ATT&CK Navigator is a powerful tool for visualizing and annotating an ATT&CK
 matrix or collection. You can use it to visualize security control coverage,
@@ -110,7 +104,14 @@ visualize and export content in support of the Defending IaaS use cases.
 Download the Collection
 -----------------------
 
-You can also `download the collection
-<https://github.com/center-for-threat-informed-defense/defending-iaas-with-attack/tree/main/data>`__
-in machine-readable format (STIX JSON) or Excel spreadsheet for use in other
-tools or if you want to write custom software to process the collection.
+.. raw:: html
+
+    <p>
+        <a class="btn btn-primary" download href="https://raw.githubusercontent.com/center-for-threat-informed-defense/defending-iaas-with-attack/main/data/defending-iaas-1.0.xlsx">
+        <i class="fa fa-file-excel-o"></i> Download Mappings – Excel</a>
+        <a class="btn btn-primary" download href="https://raw.githubusercontent.com/center-for-threat-informed-defense/defending-iaas-with-attack/main/data/defending-iaas-1.0.json">
+        <i class="fa fa-file-code-o"></i> Download Mappings – STIX</a>
+    </p>
+
+You can also download the collection as an Excel spreadsheet or a STIX bundle for use in
+other tools, or if you want to write custom software to process the collection.
