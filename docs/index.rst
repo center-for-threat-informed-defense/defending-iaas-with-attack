@@ -9,12 +9,12 @@ known adversary behaviors described by ATT&CK. The project methodology is also
 documented so that organizations can create their own customized collections
 tailored to their unique needs and circumstances.
 
-This project is created and maintained by the `MITRE Engenuity Center for
-Threat-Informed Defense <https://ctid.mitre-engenuity.org/>`__ in futherance of
+This project is created and maintained by the `MITRE Center for
+Threat-Informed Defense <https://ctid.mitre.org/>`__ in futherance of
 our mission to advance the start of the art and and the state of the practice in
 threat-informed defense globally. The project is funded by our `research
 participants
-<https://ctid.mitre-engenuity.org/our-work/defending-iaas-with-attack/#RESEARCH-PARTICIPANTS>`__.
+<https://ctid.mitre.org/projects/defending-iaas-with-attack/#participants-section>`__.
 
 .. toctree::
     :maxdepth: 2
@@ -26,7 +26,7 @@ participants
 
 Notice
 ------
-© 2022 MITRE Engenuity. Approved for public release. Document number CT0059.
+© 2022 The MITRE Corporation. Approved for public release. Document number CT0059.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License. You may obtain a copy of the

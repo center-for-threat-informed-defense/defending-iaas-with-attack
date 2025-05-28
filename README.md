@@ -52,13 +52,13 @@ advance threat-informed defense:
 ## Questions and Feedback
 
 Please submit issues for any technical questions/concerns or contact
-ctid@mitre-engenuity.org directly for more general inquiries.
+ctid@mitre.org directly for more general inquiries.
 
 Also see the guidance for contributors if are you interested in contributing or
 simply reporting issues.
 
 ## Notice
-Copyright 2022 MITRE Engenuity. Approved for public release. Document number
+Copyright 2022 The MITRE Corporation. Approved for public release. Document number
 CT0059.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
